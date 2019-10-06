@@ -3,14 +3,9 @@
 Projeto criado para teste de conhecimento técnico.
 
 
-rails g model Person name:string document:string date_of_birth:date
-rails g model PetKind name:string
-rails g model Pet name:string monthly_cost:decimal pet_kind:references person:references
-rails g scaffold Pet name:string monthly_cost:decimal pet_kind:references person:references
-
-
 Questões
-As questões devem ser respondidas com queries do ActiveRecord. Inclua os trechos de código que respondem as perguntas abaixo:
+As questões devem ser respondidas com queries do ActiveRecord.
+Inclua os trechos de código que respondem as perguntas abaixo:
 
 Qual é o custo médio dos animais do tipo cachorro?
   PetKind.find_by(name: 'Cachorro').pets.average(:monthly_cost).to_f

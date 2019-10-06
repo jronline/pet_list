@@ -30,16 +30,20 @@
     <%=f.error_span(:monthly_cost) %>
   </div>
   <div class="form-group">
-    <%= f.label :pet_kind_id, :class => 'control-label col-lg-2' %>
+    <%= f.label :pet_kind, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :pet_kind_id, :class => 'form-control' %>
+      <%= f.select :pet_kind_id,
+                   pet_kinds,
+                   { prompt: 'Select Kind' }, class: 'form-control' %>
     </div>
     <%=f.error_span(:pet_kind_id) %>
   </div>
   <div class="form-group">
-    <%= f.label :person_id, :class => 'control-label col-lg-2' %>
+    <%= f.label :person, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :person_id, :class => 'form-control' %>
+      <%= f.select :person_id,
+                   pet_owners,
+                   { prompt: 'Select owner' }, class: 'form-control' %>
     </div>
     <%=f.error_span(:person_id) %>
   </div>

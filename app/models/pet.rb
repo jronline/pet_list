@@ -20,7 +20,9 @@ class Pet < ApplicationRecord
     return unless pet_kind.name == 'Andorinha'
     return unless (person.date_of_birth + 18.years) < Date.today
 
-    errors[:person] << "#{person.name} is to young to have a #{pet_kind.name}"
+    errors[:person] << I18n.t('activerecord.errors.pet.person_age',
+                              name: person.name,
+                              pet_kind: pet_kind.name)
   end
 
   # Pessoas que tenham nome começando com a letra "A" não podem ter animais do tipo Gato
@@ -29,7 +31,7 @@ class Pet < ApplicationRecord
     return unless pet_kind.name == 'Gato'
     return unless person.name.start_with?('A')
 
-    errors[:person] << "with name starting with 'A' can't have Cats"
+    errors[:person] << I18n.t('activerecord.errors.pet.cat_owner')
   end
 
   # Pessoas que ja tiverem custos com animais acima de 1000 nao podem ter mais animais
@@ -37,6 +39,9 @@ class Pet < ApplicationRecord
     return unless person
     return unless person.monthly_spend > 1000
 
-    errors[:person] << "#{person.name} can't spend more than #{number_to_currency(1000, format: '%u%n')}"
+    errors[:person] << I18n.t('activerecord.errors.pet.spending_error',
+                              name: person.name,
+                              currency: number_to_currency(1000,
+                                                           format: '%u%n'))
   end
 end

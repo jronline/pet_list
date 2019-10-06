@@ -13,7 +13,6 @@ class Pet < ApplicationRecord
   validate :owner_spending_limit_validation, on: :create
 
   # CUSTOM VALIDATIONS
-
   # Pessoas devem ter mais de 18 anos para ter andorinhas
   def person_age_validation
     return unless person && pet_kind

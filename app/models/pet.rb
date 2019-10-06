@@ -4,7 +4,7 @@ class Pet < ApplicationRecord
   belongs_to :pet_kind
   belongs_to :person
 
-  validates :name, :monthly_cost, :pet_kind, :person, presence: true
+  validates :name, :monthly_cost, presence: true
   validates :monthly_cost, numericality: { greater_than_or_equal_to: 0,
                                            less_than_or_equal_to: 1000 }
 

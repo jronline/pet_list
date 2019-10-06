@@ -167,9 +167,11 @@ pt-BR:
     actions: Ações
     home: Página inicial
     titles:
+      edit: Editar %{model}
       new: Novo(a) %{model}
     links:
       cancel: Cancelar
+      confirm: Você tem certeza?
       new: Novo
       show: Exibir
       edit: Editar

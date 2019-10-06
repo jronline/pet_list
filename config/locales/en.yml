@@ -1,3 +1,15 @@
+
+en:
+  hello: "Hello world"
+  activerecord:
+    errors:
+      pet:
+        cat_owner: "with name starting with 'A' can't have Cats"
+        person_age: "%{name} is to young to have a #{pet_kind}"
+        spending_error: "%{name} can't spend more than %{currency}"
+
+
+        
 # Files in the config/locales directory are used for internationalization
 # and are automatically loaded by Rails. If you want to use locales other
 # than English, add the necessary files in this directory.
@@ -28,12 +40,3 @@
 #
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
-
-en:
-  hello: "Hello world"
-  activerecord:
-    errors:
-      pet:
-        cat_owner: "with name starting with 'A' can't have Cats"
-        person_age: "%{name} is to young to have a #{pet_kind}"
-        spending_error: "%{name} can't spend more than %{currency}"

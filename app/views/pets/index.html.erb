@@ -18,8 +18,8 @@
       <tr>
         <td><%= pet.name %></td>
         <td><%= pet.monthly_cost %></td>
-        <td><%= pet.pet_kind %></td>
-        <td><%= pet.person %></td>
+        <td><%= pet.pet_kind.try(:name) %></td>
+        <td><%= pet.person.try(:name) %></td>
         <td><%= link_to 'Show', pet %></td>
         <td><%= link_to 'Edit', edit_pet_path(pet) %></td>
         <td><%= link_to 'Destroy', pet, method: :delete, data: { confirm: 'Are you sure?' } %></td>

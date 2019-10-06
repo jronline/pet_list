@@ -7,11 +7,11 @@
   <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
   <dd><%= @pet.name %></dd>
   <dt><strong><%= model_class.human_attribute_name(:monthly_cost) %>:</strong></dt>
-  <dd><%= @pet.monthly_cost %></dd>
+  <dd><%= number_to_currency(@pet.monthly_cost) %></dd>
   <dt><strong><%= model_class.human_attribute_name(:pet_kind_id) %>:</strong></dt>
-  <dd><%= @pet.pet_kind_id %></dd>
+  <dd><%= @pet.pet_kind.try(:name) %></dd>
   <dt><strong><%= model_class.human_attribute_name(:person_id) %>:</strong></dt>
-  <dd><%= @pet.person_id %></dd>
+  <dd><%= @pet.person.try(:name) %></dd>
 </dl>
 
 <%= link_to t('.back', :default => t("helpers.links.back")),

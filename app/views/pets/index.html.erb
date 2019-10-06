@@ -19,7 +19,7 @@
       <tr>
         <td><%= link_to pet.id, pet_path(pet) %></td>
         <td><%= pet.name %></td>
-        <td><%= pet.monthly_cost %></td>
+        <td><%= number_to_currency(pet.monthly_cost) %></td>
         <td><%= pet.pet_kind.try(:name) %></td>
         <td><%= pet.person.try(:name) %></td>
         <td><%=l pet.created_at %></td>

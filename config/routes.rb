@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :people
   resources :pet_kinds
   root to: "pets#index"
   resources :pets

@@ -32,7 +32,7 @@
   <div class="form-group">
     <%= f.label :date_of_birth, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :date_of_birth, :class => 'form-control' %>
+      <%= f.text_field :date_of_birth, type: 'date', :class => 'form-control' %>
     </div>
     <%=f.error_span(:date_of_birth) %>
   </div>
@@ -46,3 +46,9 @@
   </div>
 
 <% end %>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+      $('#date').mask('(00) 0000-0000#');
+  });
+</script>

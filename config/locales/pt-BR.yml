@@ -6,6 +6,13 @@ pt-BR:
       pet: Pet
       pet_kind: Espécie
     attributes:
+      person:
+        created_at: Data do Registro
+        date_of_birth: Data de Nascimento
+        document: Documento
+        id: Código
+        name: Nome
+        updated_at: Data de Atualização
       pet:
         created_at: Data do Registro
         id: Código

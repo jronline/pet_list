@@ -170,6 +170,7 @@ pt-BR:
       edit: Editar %{model}
       new: Novo(a) %{model}
     links:
+      back: Voltar
       cancel: Cancelar
       confirm: Você tem certeza?
       new: Novo

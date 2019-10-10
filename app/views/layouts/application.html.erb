@@ -12,10 +12,19 @@
   <body>
     <nav class="navbar navbar-light bg-light">
       <div class="pull-right">
-        <%= link_to t(:home, scope: :helpers), root_path, class: "btn btn-outline-success my-2 my-sm-0" %>
-        <%= link_to t(:pet, scope: [:activerecord, :models]), pets_path, class: "btn btn-outline-success my-2 my-sm-0" %>
-        <%= link_to t(:pet_kind, scope: [:activerecord, :models]), pet_kinds_path, class: "btn btn-outline-success my-2 my-sm-0" %>
-        <%= link_to t(:person, scope: [:activerecord, :models]), people_path, class: "btn btn-outline-success my-2 my-sm-0" %>
+        <%= link_to t(:home, scope: :helpers),
+                    root_path, class: "btn btn-outline-success my-2 my-sm-0" %>
+        <%= link_to t(:pet,
+                      scope: [:activerecord, :models]).pluralize.titleize,
+                    pets_path, class: "btn btn-outline-success my-2 my-sm-0" %>
+        <%= link_to t(:pet_kind,
+                      scope: [:activerecord, :models]).pluralize.titleize,
+                    pet_kinds_path,
+                    class: "btn btn-outline-success my-2 my-sm-0" %>
+        <%= link_to t(:person,
+                      scope: [:activerecord, :models]).pluralize.titleize,
+                    people_path,
+                    class: "btn btn-outline-success my-2 my-sm-0" %>
       </div>
     </nav>
 

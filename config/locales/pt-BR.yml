@@ -4,17 +4,30 @@ pt-BR:
     models:
       person: Pessoa
       pet: Pet
+      pet_kind: Espécie
     attributes:
-      pet:
+      person:
+        created_at: Data do Registro
+        date_of_birth: Data de Nascimento
+        document: Documento
         id: Código
         name: Nome
+        updated_at: Data de Atualização
+      pet:
+        created_at: Data do Registro
+        id: Código
         monthly_cost: Custo mensal
-        pet_kind: Tipo
-        pet_kind_id: Tipo
+        name: Nome
         person: Dono(a)
         person_id: Dono(a)
+        pet_kind: Tipo
+        pet_kind_id: Tipo
+        updated_at: Data de Atualização
+      pet_kind:
         created_at: Data do Registro
-        created_at: Data de Atualização
+        updated_at: Data de Atualização
+        id: Código
+        name: Nome
     errors:
       pet:
         cat_owner: "Com nome iniciando com 'A' não pode possuir Gatos"
@@ -170,6 +183,7 @@ pt-BR:
       edit: Editar %{model}
       new: Novo(a) %{model}
     links:
+      back: Voltar
       cancel: Cancelar
       confirm: Você tem certeza?
       new: Novo

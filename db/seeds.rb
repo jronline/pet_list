@@ -98,6 +98,6 @@ pets = [{
           pet_kind_id: PetKind.where(name: 'Ornitorrinco').first.id,
           person_id: Person.where(name: 'Elvis Presley').first.id
         }]
-        pets.each do |pet|
-          Pet.where(pet).first_or_create
-        end
+pets.each do |pet|
+  Pet.where(pet).first_or_create
+end

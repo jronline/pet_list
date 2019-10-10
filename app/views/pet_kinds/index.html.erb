@@ -16,7 +16,7 @@
       <tr>
         <td><%= link_to pet_kind.id, pet_kind_path(pet_kind) %></td>
         <td><%= pet_kind.name %></td>
-        <td><%=l pet_kind.created_at %></td>
+        <td><%=l pet_kind.created_at, format: :short %></td>
         <td>
           <%= link_to t('.show', :default => t("helpers.links.show")),
                       pet_kind_path(pet_kind), :class => 'btn btn-default btn-xs' %>

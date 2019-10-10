@@ -22,7 +22,7 @@
         <td><%= number_to_currency(pet.monthly_cost) %></td>
         <td><%= pet.pet_kind.try(:name) %></td>
         <td><%= pet.person.try(:name) %></td>
-        <td><%=l pet.created_at %></td>
+        <td><%=l pet.created_at, format: :short %></td>
         <td>
           <%= link_to t('.show', :default => t("helpers.links.show")),
                       pet_path(pet), :class => 'btn btn-default btn-xs' %>

@@ -19,8 +19,8 @@
         <td><%= link_to person.id, person_path(person) %></td>
         <td><%= person.name %></td>
         <td><%= person.document %></td>
-        <td><%= person.date_of_birth %></td>
-        <td><%=l person.created_at %></td>
+        <td><%= l person.date_of_birth, format: :long %></td>
+        <td><%= l person.created_at, format: :short %></td>
         <td>
           <%= link_to t('.show', :default => t("helpers.links.show")),
                       person_path(person), :class => 'btn btn-default btn-xs' %>
